@@ -41,9 +41,18 @@
     // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */
 
     /* Module Resolution Options */
-    // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
-    // "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */
-    // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */
+    //模块名到基于 baseUrl的路径映射的列表
+    //第三方模块先查找node_modules，找不到，会找baseUrl的映射paths，
+    //相当于拓宽了第三方模块的查找范围
+    "paths": { // * 表示访问的模块名
+      "*": [
+        "./types/*" // 表示取./types/模块名 查找
+      ],
+      "jquery":["types/jquery/index.d.ts"],
+      "xxx": ["xxx/index.ts"]
+    },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
     // "types": [],                           /* Type declaration files to be included in compilation. */
@@ -65,5 +74,8 @@
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  // "include": [ // 需要检测的ts文件
+  //   "types/**/*"
+  // ] 
 }

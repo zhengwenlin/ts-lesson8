@@ -1,6 +1,6 @@
 // 类  
 // 3种属性  类调用的静态属性  私有的实例属性  共享的原型属性
-
+export {}
 // 修饰符： (public  protected  private)父子类之间的   readonly
 // public 默认是public  父类内部，子类内部，类外边都可以访问
 // protected 受保护的， 父类内部，子类内部可以访问， 类外边不能访问

@@ -2,5 +2,7 @@
   "editor.fontSize": 18,
   "editor.tabSize": 2,
   "editor.fontWeight": null,
-  "editor.fontLigatures": null
+  "editor.fontLigatures": null,
+  "window.zoomLevel": 1,
+  "editor.mouseWheelZoom": true
 }
